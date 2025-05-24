@@ -1,0 +1,31 @@
+class Trie:
+
+    def __init__(self):
+        self.d = {}
+        self.end = False
+
+    def insert(self, word: str) -> None:
+        if word:
+            if self.d.get(word[0], None) is None:
+                self.d[word[0]] = Trie()
+            self.d[word[0]].insert(word[1:])
+        else:
+            self.end = True
+        
+    def search(self, word: str) -> bool:
+        if word:
+            if self.d.get(word[0], None) is None:
+                return False
+            else:
+                return self.d[word[0]].search(word[1:])
+        else:
+            return self.end
+
+    def startsWith(self, prefix: str) -> bool:
+        if prefix:
+            if self.d.get(prefix[0], None) is None:
+                return False
+            else:
+                return self.d[prefix[0]].startsWith(prefix[1:])
+        else:
+            return True
