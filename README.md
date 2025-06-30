@@ -3,7 +3,7 @@ This repository includes various computer science algorithms and implementations
 
 | Folder | Project | Status |
 |--------|---------|--------|
-| /leetcode | Python3 Solutions to LeetCode problems | 🟠 **In Progress** |
+| /algorithms | Python3 Solutions to Data Structures and Algorithms problems | 🟠 **In Progress** |
 
 ---
 ## License
